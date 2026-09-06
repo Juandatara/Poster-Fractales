@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/c:\\Users\\JUAN\\Desktop\\proyectos\\LaTeX\\poster-fractales\\main.aux": true,
+        "**/c:\\Users\\JUAN\\Desktop\\proyectos\\LaTeX\\poster-fractales\\main.log": true,
+        "**/c:\\Users\\JUAN\\Desktop\\proyectos\\LaTeX\\poster-fractales\\main.gz": true,
+        "**/c:\\Users\\JUAN\\Desktop\\proyectos\\LaTeX\\poster-fractales\\main.out": true
+    }
+}
