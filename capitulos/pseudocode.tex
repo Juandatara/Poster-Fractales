@@ -1,0 +1,19 @@
+\section{Pseudocodigo}
+
+Para generar la pirámide se usó el siguiente algoritmo, basado en el algoritmo para generar el triángulo:
+
+\begin{algorithmic}
+	\REQUIRE Longitud de arista ($L$), coordenadas punto inicial ($P_0$), número de iteraciones ($n$)
+	\ENSURE Pirámide de Sierpinski
+	\STATE $P_1 \gets [P_0[0]+L,   P_0[1],              P_0[2]]$
+	\STATE $P_2 \gets [P_0[0]+L/2, P_0[1]+L*3**(1/2)/2, P_0[2]]$
+	\STATE $P_3 \gets [P_0[0]+L/2, P_0[1]+L*3**(1/2)/6, P_0[2]+L*6**(1/2)/3]$
+	\IF{$n == 0$}
+		\STATE $[P_0, P_1, P_2, P_3] \gets PiramideRegular$
+	\ELSE
+		\STATE PiramideSierpinski($L/2, P_0, n-1$)
+		\STATE PiramideSierpinski($L/2, [P_0[0]+L/2, P_0[1],              P_0[2]], n-1$)
+		\STATE PiramideSierpinski($L/2, [P_0[0]+L/4, P_0[1]+L*3**(1/2)/4, P_0[2]], n-1$)
+		\STATE PiramideSierpinski($L/2, [P_0[0]+L/4, P_0[1]+L/48**(1/2),  P_0[2]+L*6**(1/2)/6], n-1$)
+	\ENDIF
+\end{algorithmic}
