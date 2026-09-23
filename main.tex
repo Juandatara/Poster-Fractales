@@ -96,36 +96,19 @@
 \vspace{-1cm}
 Los fractales y los autómatas celulares son áreas fundamentales de las matemáticas y la computación, exploradas de manera independiente. Su intersección permite investigar la generación de patrones fractales a partir de reglas simples en autómatas celulares. La necesidad del estudio de estas áreas es importante desde el punto de vista teórico y por sus aplicaciones prácticas en el modelado de sistemas naturales y físicos y en la generación de arte algorítmico. Este trabajo presenta una exploración computacional mediante Python, de fractales generados por métodos numéricos y de autómatas celulares unidimensionales a través de las reglas de Wolfram, mostrando visualizaciones que permiten explorar cómo algunos fractales pueden generarse a partir de patrones de autómatas celulares, lo que nos lleva finalmente a introducir su aplicación en la modelación de epidemias.   
 
-\vspace{-1.0cm}
-\section*{Fractales - Método de Newton-Raphson}
-\vspace{-1cm}
 
-El método de Newton es un procedimiento iterativo para aproximar raíces de funciones no lineales $f(x)=0$, dado por 
-\[
-x_n = x_{n-1} - \frac{f(x_{n-1})}{f'(x_{n-1})},\ \ n\in\mathbb{Z}^+,
-\]
-siempre que \( f'(x_{n-1}) \neq 0 \) y $x_0$ es la aproximación inicial.\\
-Es posible generar fractales no lineales al iterar el método de Newton sobre funciones complejas para diferentes valores iniciales $z_0=a_0+b_0i$, $a_0,b_0\in \mathbb{R}$, donde cada punto $(a_0,b_0)$ se colorea según la raíz a la que converge la iteración. El eje $x$ representa la parte real (Re($z$)) y el eje $y$ la compleja (Im($z$)). De esta forma se generan fractales como los pertenecientes a los de los conjuntos de Julia.\\
-\vspace{-1.3cm}
-\noindent\textbf{Ejemplo del Fractal de $f(z)=z^2+1$}, con valores iniciales $z_0=a_0+b_0i$, $a_0,b_0\in [-2,2]$.\\%$raíces: $i$ y $-i$.
-\vspace{-0.1cm}
 \begin{multicols}{2}
-\begin{itemize}
-    \item Función: $f(z)=z^2+1$.
-    \item Derivada: $f'(z)=2z$.
-    \item Raíces: $i,-i$.
-    %\item Valores iniciales: $z_0=a_0+b_0i$, $a_0,b_0\in [-2,2]$.
-    \item Fórmula iterativa (operaciones complejas): $z_n= z_{n-1}-\dfrac{z_{n-1}^2+1}{2z_{n-1}}$.
-    \item Criterio de parada $(|a+bi|=\sqrt{a^2+b^2})$: $|z_n - z_{n-1}|<$Tolerancia.
-    \item Convergencia de las raíces: \linebreak $d_1 = |z_n - i|$ y $d_2 = |z_n + i|$. Si $d_1 < d_2$, $z_n$ converge a la raíz $i$ sino es a $-i$.
-\end{itemize}  
+
+\input{capitulos/hausdorff.tex}
+
+\input{capitulos/propiedades.tex}
+  
 \end{multicols}
 \vspace{-0.7cm}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=1]{Figuras/fractal_raices2.png}
 \includegraphics[scale=1]{Figuras/fractal_iteraciones2.png}
-\vspace{-0.7cm}
 \caption{Fractal de convergencia de raíces e iteraciones de $f(z)=z^2+1$. Raíz 1 = i (rojo) y Raíz 2 = -i (verde).}
 \end{figure}
 \vspace{-0.5cm}

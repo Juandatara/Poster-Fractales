@@ -1,0 +1,37 @@
+\section{Dimensión de Hausdorff y Autosimilitud}
+
+El Triángulo de Sierpinski (Figura \ref{sierspinsky}) es un objeto \textbf{autosimilar}: al acercarnos a cualquier parte de su interior, reencontramos la misma estructura original. Para caracterizar geométricamente este tipo de objetos, utilizamos la \textbf{Dimensión de Hausdorff}, que responde a la pregunta: \textit{¿Cuánto espacio llena realmente la figura?}
+
+Es importante matizar que la autosimilitud no implica directamente que un objeto sea un fractal, así como no todos los fractales son estrictamente autosimilares.
+
+\subsection{Intuición geométrica del espacio}
+
+Consideremos objetos clásicos de longitud 1 y dividámoslos en fragmentos de tamaño $\frac{1}{n}$:
+\begin{itemize}
+    \item \textbf{Segmento (1D):} Para rellenarlo necesitamos $N = n^1$ copias.
+    \item \textbf{Cuadrado (2D):} Para rellenarlo necesitamos $N = n^2$ copias.
+\end{itemize}
+
+En general, el número de fragmentos $N(n)$ requeridos se relaciona con el factor de división $n$ mediante un exponente $d$ (la dimensión hipotética):
+\begin{equation}
+    N(n) = n^d
+\end{equation}
+
+\subsection{Cálculo de la dimensión hipotética}
+
+Aplicando logaritmos y despejando $d$, obtenemos una dimensión que no necesita ser un número entero:
+\begin{equation}
+    d = \frac{\log(N(n))}{\log(n)}
+    \label{eq:dim_similitud}
+\end{equation}
+
+\subsection{Generalización en el límite}
+
+Para medir un área compleja $A \subset \mathbb{R}^2$, contemplando solapamientos y recubrimientos de regiones externas a $A$, la teoría de Hausdorff se basa en recubrir $A$ con sucesiones finitas numerables de conjuntos de diámetros infinitesimales ($x_i \to 0$) \cite{Gustavo}. Al tomar el límite, la dimensión fractal se define formalmente como:
+\begin{equation}
+    d = \lim_{n \to \infty} \frac{\log(N(n))}{\log(n)}
+    \label{eq:dim_hausdorff}
+\end{equation}
+Este límite nos permite calcular la dimensión exacta de fractales geométricos mediante su escala de recubrimiento.
+
+

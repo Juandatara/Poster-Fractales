@@ -1,0 +1,22 @@
+\section*{Propiedades del tetraedro de Sierpinski}
+
+El tetraedro de Sierpinski posee propiedades geométricas y fractales fascinantes:
+
+\begin{itemize}
+    \item \textbf{Autosimilitud:} Es una figura estrictamente autosimilar. Está compuesto por cuatro copias de sí mismo escaladas a la mitad, manteniendo su forma geométrica idéntica en cualquier nivel de aumento.
+    
+    \item \textbf{Volumen evanescente:} En cada iteración $n$, el volumen total se reduce a la mitad. Partiendo de un volumen inicial $V_{0}$, se define como $V_{n}= V_{0}(1/2)^{n}$. Al tender a infinitas iteraciones, el volumen desaparece:
+    \begin{equation*}
+        \lim_{n \to \infty } V_{0}\left(\frac{1}{2}\right)^{n} = 0
+    \end{equation*}
+    
+    \item \textbf{Área superficial constante:} A diferencia del volumen, el área superficial se conserva intacta a lo largo de las iteraciones. El área de las caras que se eliminan es compensada exactamente por las nuevas superficies que se forman, cumpliendo la propiedad de aditividad:
+    \begin{equation*}
+        A_{n} = A_{0} = L^{2}\sqrt{3}
+    \end{equation*}
+    
+    \item \textbf{Dimensión Fractal:} Curiosamente, aunque se construye en un espacio tridimensional ($\mathbb{R}^3$), su dimensión de Hausdorff no es fraccionaria, sino exactamente igual a la de una superficie bidimensional $ \mathbb{R}^{2}$. Al formarse por 4 copias a una escala de $1/2$, se calcula como:
+    \begin{equation*}
+        D = \frac{\log(4)}{\log(2)} = 2
+    \end{equation*}
+\end{itemize}
