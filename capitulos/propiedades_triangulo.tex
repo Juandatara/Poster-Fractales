@@ -1,0 +1,20 @@
+\section{Propiedades del Triángulo de Sierpinski}
+
+\begin{itemize}
+    \item \textbf{Autosimilitud:} Es una figura estrictamente autosimilar. Está compuesto por tres copias de sí mismo (excluyendo el hueco central) escaladas a la mitad ($\frac{1}{2}$), manteniendo su forma geométrica idéntica en cualquier nivel de aumento.
+    
+    \item \textbf{Perímetro infinito:} En cada iteración, el perímetro total aumenta por un factor de $\frac{3}{2}$ respecto a la iteración anterior. Si el triángulo inicial tiene un perímetro $P_0$, el perímetro en la iteración $n$ es $P_n = P_0 \left(\frac{3}{2}\right)^n$. Por lo tanto:
+    \begin{equation*}
+       \lim_{n \to \infty} P_0 \left(\frac{3}{2}\right)^{n} = \infty
+    \end{equation*}
+    
+    \item \textbf{Área nula:} En cada paso se elimina una cuarta parte del área, lo que significa que el área restante es tres cuartas partes ($\frac{3}{4}$) de la anterior. Si el triángulo inicial tiene un área $A_0$, el área en la iteración $n$ es $A_n = A_0 \left(\frac{3}{4}\right)^n$. Por lo tanto:
+    \begin{equation*}
+        \lim_{n \to \infty} A_0 \left(\frac{3}{4}\right)^{n} = 0
+    \end{equation*}
+    
+    \item \textbf{Dimensión fractal:} No es una figura unidimensional ni bidimensional clásica. Su dimensión de Hausdorff es fraccionaria. Al estar formado por $3^n$ copias homotéticas con un factor de escala de $\left(\frac{1}{2}\right)^n$, se calcula mediante la relación logarítmica:
+    \begin{equation*}
+        D = \frac{\ln(3)}{\ln(2)} \approx 1.585
+    \end{equation*}
+\end{itemize}
