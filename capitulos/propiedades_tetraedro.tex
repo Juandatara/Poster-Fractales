@@ -1,22 +1,37 @@
-\section*{Propiedades del Tetraedro de Sierpinski}
+\section{Propiedades del Tetraedro de Sierpinski}
 
-El tetraedro de Sierpinski posee propiedades geométricas y fractales fascinantes:
+Se divide el tetraedro en ocho partes, se conservan los cuatro tetraedros de los vértices y el proceso se repite recursivamente en cada iteración.
 
-\begin{itemize}
-    \item \textbf{Autosimilitud:} Es una figura estrictamente autosimilar. Está compuesto por cuatro copias de sí mismo escaladas a la mitad, manteniendo su forma geométrica idéntica en cualquier nivel de aumento.
-    
-    \item \textbf{Volumen evanescente:} En cada iteración $n$, el volumen total se reduce a la mitad. Partiendo de un volumen inicial $V_{0}$, se define como $V_{n}= V_{0}(1/2)^{n}$. Al tender a infinitas iteraciones, el volumen desaparece:
-    \begin{equation*}
-        \lim_{n \to \infty } V_{0}\left(\frac{1}{2}\right)^{n} = 0
-    \end{equation*}
-    
-    \item \textbf{Área superficial constante:} A diferencia del volumen, el área superficial se conserva intacta a lo largo de las iteraciones. El área de las caras que se eliminan es compensada exactamente por las nuevas superficies que se forman, cumpliendo la propiedad de aditividad:
-    \begin{equation*}
-        A_{n} = A_{0} = L^{2}\sqrt{3}
-    \end{equation*}
-    
-    \item \textbf{Dimensión Fractal:} Curiosamente, aunque se construye en un espacio tridimensional ($\mathbb{R}^3$), su dimensión de Hausdorff no es fraccionaria, sino exactamente igual a la de una superficie bidimensional $ \mathbb{R}^{2}$. Al formarse por 4 copias a una escala de $1/2$, se calcula como:
-    \begin{equation*}
-        D = \frac{\log(4)}{\log(2)} = 2
-    \end{equation*}
-\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{Figuras/Tetraedro.png}
+    \caption{Construcción del Tetraedro de Sierpiński mediante iteraciones sucesivas. Se muestra el Tetraedro inicial, la primera iteración y la quinta iteración del proceso.}
+    \label{fig:Tetraedro-sierpinski}
+\end{figure}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.22\linewidth} p{0.36\linewidth} p{0.30\linewidth}}
+\hline
+\textbf{Propiedad} & \textbf{Descripción} & \textbf{Expresión} \\
+\hline
+
+\textbf{Autosimilitud} &
+Está compuesto por $4$ copias de sí mismo, cada una escalada por un factor de $\frac{1}{2}$. &
+$N=4,\quad r=\frac{1}{2}$ \\
+
+\textbf{Volumen evanescente} &
+El volumen se reduce a la mitad en cada iteracion cuando $n\rightarrow\infty$. &
+$ \displaystyle \lim_{n \to \infty }V_0\left(\frac{1}{2}\right)^n=0$
+\\[0.1cm]
+
+\textbf{Área Superficial} &
+El área superficial se conserva intacta a lo largo de las iteraciones.
+& $ A_{n} = A_{0} = L^{2}\sqrt{3}$ \\
+\\[0.1cm]
+\textbf{Dimensión fractal} &
+Construcción en un espacio tridimensional ($\mathbb{R}^3$), su dimensión de Hausdorff es bidimensional $ \mathbb{R}^{2}$.
+& $D = \frac{\log(4)}{\log(2)} = 2$ \\
+\hline
+\end{tabular}
+\end{center}

@@ -1,24 +1,28 @@
 \section{Introducción}
 
-La geometría fractal permite el estudio de estructuras complejas y 
-autosimilares mediante procesos iterativos. Esta investigación aborda 
-la transición de estos sistemas desde el plano bidimensional hacia el 
-espacio tridimensional mediante los siguientes enfoques:
+La geometría fractal permite estudiar estructuras complejas mediante procesos iterativos y autosimilares. Este proyecto explora su construcción desde el caso bidimensional hacia el tridimensional, tomando como referencia el algoritmo presentado en \cite{Diego}:
 
- \begin{itemize}
-    \item \textbf{Triángulo de Sierpinski}: Construcción bidimensional iterativa 
-    generada al reducir un triángulo equilátero a su cuarta parte y 
-    posicionar tres figuras a escala, formando un patrón continuo de 
-    autosimilitud.
+\begin{itemize}
+\item \textbf{Sierpinski 2D:} construcción iterativa del triángulo.
 
-    \item \textbf{Tetraedro de Sierpinski y dimensión fractal}: Generalización 
-    tridimensional mediante un algoritmo que ensambla cuatro copias de un tetraedro 
-    regular con sus aristas reducidas a la mitad. Esta extensión resalta el papel de 
-    la dimensión fractal para describir la complejidad espacial y facilita el 
-    análisis de la evolución del área hacia el volumen.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Figuras/Triangulo_Sierspinski.png}
+    \caption{Construcción iterativa del Triangulo de Sierspinski}
+    \label{fig:t_sierpinski}
+\end{figure}
 
-    \item \textbf{Construcción Computacional:} Diseño de un pseudocódigo basado 
-    en llamadas recursivas que utiliza como parámetros la longitud de la arista, 
-    el punto inicial y el número de iteraciones para visualizar matemáticamente 
-    la estructura generada.
- \end{itemize}
+\item \textbf{Sierpinski 3D:} extensión al tetraedro y análisis de su dimensión fractal.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Figuras/Tetraedro_Sierpinski_Solido.png}
+    \caption{Construcción iterativa del Tetraedro de Sierspinski}
+    \label{fig:tetraedro_sierpinski_solido}
+\end{figure}
+
+\item \textbf{Modelación computacional:} implementación y visualización de los procesos iterativos.
+
+
+\end{itemize}
+

@@ -1,38 +1,43 @@
 \section{Dimensión de Hausdorff y Autosimilitud}
 
-El Triángulo de Sierpinski (Figura \ref{sierspinsky}) es un objeto \textbf{autosimilar}: al acercarnos a cualquier parte de su interior, reencontramos la misma estructura original. Para caracterizar geométricamente este tipo de objetos, utilizamos la \textbf{Dimensión de Hausdorff}, que responde a la pregunta: \textit{¿Cuánto espacio llena realmente la figura?}
+El Triángulo de Sierpinski (Figura \ref{sierspinsky}) es un objeto 
+\textbf{autosimilar}para este tipo de objetos, utilizamos la \textbf{dimensión de Hausdorff}, 
+que permite cuantificar cómo una figura ocupa el espacio.
 
-Es importante matizar que la autosimilitud no implica directamente que un objeto sea un fractal, así como no todos los fractales son estrictamente autosimilares.
+Para medir un área compleja $A \subset \mathbb{R}^2$, contemplando 
+solapamientos y recubrimientos de regiones externas a $A$, la teoría 
+de Hausdorff se basa en recubrir $A$ mediante conjuntos de diámetros 
+cada vez menores ($x_i \to 0$) \cite{Gustavo}.
 
-Consideremos objetos clásicos de longitud 1 y dividámoslos en fragmentos de tamaño $\frac{1}{n}$:
-\begin{itemize}
-    \item \textbf{Segmento (1D):} Para rellenarlo necesitamos $N = n^1$ copias.
-    \item \textbf{Cuadrado (2D):} Para rellenarlo necesitamos $N = n^2$ copias.
-    \item \textbf{Cuadrado (3D):} Para rellenarlo necesitamos $N = n^3$ copias.
-\end{itemize}
-
-En general, el número de fragmentos $N(n)$ requeridos se relaciona con el factor de división $n$ mediante un exponente $d$ (la dimensión hipotética):
 \begin{equation}
-    N(n) = n^d
-\end{equation}
-
-Aplicando logaritmos y despejando $d$, obtenemos una dimensión que no necesita ser un número entero:
-\begin{equation}
-    d = \frac{\log(N(n))}{\log(n)}
-    \label{eq:dim_similitud}
-\end{equation}
-
-Para medir un área compleja $A \subset \mathbb{R}^2$, contemplando solapamientos y recubrimientos de regiones externas a $A$, la teoría de Hausdorff se basa en recubrir $A$ con sucesiones finitas numerables de conjuntos de diámetros infinitesimales ($x_i \to 0$) \cite{Gustavo}. Al tomar el límite, la dimensión fractal se define formalmente como:
-\begin{equation}
-    d = \lim_{n \to \infty} \frac{\log(N(n))}{\log(n)}
+    D_H = \frac{\log(N)}{\log(1/r)}
     \label{eq:dim_hausdorff}
 \end{equation}
-Este límite nos permite calcular la dimensión exacta de fractales geométricos mediante su escala de recubrimiento.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\linewidth]{Figuras/copo_nieve_koch.png}
-    \caption{Ejemplo del fractal del copo de nieve de Koch, cuya dimensión fractal exacta es $d \approx 1.2619$.}
-    \label{fig:copo_koch}
-\end{figure}
+Para el Triángulo de Sierpinski, $N=3$ y $r=\frac{1}{2}$:
+
+\begin{equation}
+    \boxed{D_H = \frac{\log(3)}{\log(2)} \approx 1.585}
+\end{equation}
+
+\vspace{0.1cm}
+
+\begin{center}
+
+    \textbf{Iteración 0}\hfill
+    \textbf{Iteración 1}\hfill
+    \textbf{Iteración 8}
+
+    \vspace{0.15cm}
+
+    \includegraphics[width=0.30\linewidth]{Figuras/Triangulo_Sierspinski_n0.png}\hfill
+    \includegraphics[width=0.30\linewidth]{Figuras/Triangulo_Sierspinski_n1.png}\hfill
+    \includegraphics[width=0.30\linewidth]{Figuras/Triangulo_Sierspinski_n8.png}
+
+    \captionof{figure}{Triángulo de Sierpinski. Dimensión fractal: $D_H \approx 1.585$.}
+    \label{sierspinsky}
+
+\end{center}
+
+
 

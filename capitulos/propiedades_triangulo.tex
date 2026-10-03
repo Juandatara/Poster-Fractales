@@ -1,20 +1,35 @@
 \section{Propiedades del Triángulo de Sierpinski}
 
-\begin{itemize}
-    \item \textbf{Autosimilitud:} Es una figura estrictamente autosimilar. Está compuesto por tres copias de sí mismo (excluyendo el hueco central) escaladas a la mitad ($\frac{1}{2}$), manteniendo su forma geométrica idéntica en cualquier nivel de aumento.
-    
-    \item \textbf{Perímetro infinito:} En cada iteración, el perímetro total aumenta por un factor de $\frac{3}{2}$ respecto a la iteración anterior. Si el triángulo inicial tiene un perímetro $P_0$, el perímetro en la iteración $n$ es $P_n = P_0 \left(\frac{3}{2}\right)^n$. Por lo tanto:
-    \begin{equation*}
-       \lim_{n \to \infty} P_0 \left(\frac{3}{2}\right)^{n} = \infty
-    \end{equation*}
-    
-    \item \textbf{Área nula:} En cada paso se elimina una cuarta parte del área, lo que significa que el área restante es tres cuartas partes ($\frac{3}{4}$) de la anterior. Si el triángulo inicial tiene un área $A_0$, el área en la iteración $n$ es $A_n = A_0 \left(\frac{3}{4}\right)^n$. Por lo tanto:
-    \begin{equation*}
-        \lim_{n \to \infty} A_0 \left(\frac{3}{4}\right)^{n} = 0
-    \end{equation*}
-    
-    \item \textbf{Dimensión fractal:} No es una figura unidimensional ni bidimensional clásica. Su dimensión de Hausdorff es fraccionaria. Al estar formado por $3^n$ copias homotéticas con un factor de escala de $\left(\frac{1}{2}\right)^n$, se calcula mediante la relación logarítmica:
-    \begin{equation*}
-        D = \frac{\ln(3)}{\ln(2)} \approx 1.585
-    \end{equation*}
-\end{itemize}
+Se divide el triángulo en cuatro partes iguales, se elimina la región central y el proceso se repite recursivamente en los tres triángulos restantes \cite{Gustavo}.
+
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{0.22\linewidth} p{0.36\linewidth} p{0.30\linewidth}}
+\hline
+\textbf{Propiedad} & \textbf{Descripción} & \textbf{Expresión} \\
+\hline
+
+\textbf{Autosimilitud} &
+Está compuesto por $3$ copias de sí mismo, cada una escalada por un factor de $\frac{1}{2}$. &
+$N=3,\quad r=\frac{1}{2}$ \\
+
+\textbf{Perímetro} &
+El perímetro aumenta en cada iteración y diverge cuando $n\rightarrow\infty$. &
+$P_n=P_0\left(\frac{3}{2}\right)^n$
+\\[0.2cm]
+
+\textbf{Área} &
+El área restante se reduce a $\frac{3}{4}$ en cada iteración y tiende a cero. &
+$A_n=A_0\left(\frac{3}{4}\right)^n$
+\\[0.2cm]
+
+\textbf{Dimensión fractal} &
+Presenta una dimensión no entera, característica de su estructura fractal. &
+$\displaystyle D_H=\frac{\ln 3}{\ln 2}\approx1.585$ \\
+
+\hline
+\end{tabular}
+\end{center}
+
+
